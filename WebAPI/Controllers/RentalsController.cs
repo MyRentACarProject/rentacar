@@ -1,0 +1,167 @@
+﻿using Business.Abstract;
+using Entities.Concrete;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace WebAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class RentalsController : ControllerBase
+    {
+        IRentalService _rentalService;
+
+        public RentalsController(IRentalService rentalService)
+        {
+            _rentalService = rentalService;
+        }
+
+
+
+        [HttpGet("getall")]
+        public IActionResult GetAll()
+        {
+            Thread.Sleep(millisecondsTimeout: 1000);
+            var result = _rentalService.GetAll();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("getbyıd")]
+        public ActionResult GetById(int rentalId)
+        {
+            var result = _rentalService.GetById(rentalId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
+             
+           
+        }
+
+        [HttpGet("details")]
+        public IActionResult GetRentalDetails()
+        {
+            var result = _rentalService.GetRentalDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("undeliverdetails")]
+        public IActionResult GetUndeliveredRentalDetails()
+        {
+            var result = _rentalService.GetUndeliveredRentalDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
+        [HttpGet("deliverdetails")]
+        public IActionResult GetDeliveredRentalDetails()
+        {
+            var result = _rentalService.GetDeliveredRentalDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
+        [HttpPost("delivercar")]
+        public ActionResult DeliverCar(Rental rental)
+        {
+            var result = _rentalService.DeliverCar(rental);
+            if (result.Success)
+                return Ok(result);
+            else
+                return BadRequest(result);
+        }
+
+        [HttpGet("detailsbyrentalid")]
+        public IActionResult GetRentalDetailById(int rentalId)
+        {
+
+            var result = _rentalService.GetRentalDetailsByRentalId(rentalId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("iscarcanberent")]
+        public IActionResult IsCarCanBeRented(Rental rental)
+        {
+            var result = _rentalService.IsCarCanBeRented(rental);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+
+
+
+
+
+
+
+
+        [HttpPost("add")]
+        public IActionResult Add(Rental rental)
+        {
+            var result = _rentalService.Add(rental);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("updated")]
+        public IActionResult Update(Rental rental)
+        {
+            var result = _rentalService.Update(rental);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+        }
+
+        [HttpPost("delete")]
+        public IActionResult Delete(Rental rental)
+        {
+            var result = _rentalService.Delete(rental);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        
+    }
+}
