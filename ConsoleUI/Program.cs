@@ -116,8 +116,8 @@ namespace ConsoleUI
             }
             //carManager.Add(new Car{CarName = "Jetta",ModelYear = "2017",DailyPrice = 300,Descriptions = "Manuel Dizel",BrandId = 5,ColorId = 5});
             //carManager.Add(new Car() { CarName = "Passat", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
-            //carManager.Delete(new Car() { CarId = 2006, CarName = "Tesla 12", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
-            //carManager.Update(new Car() { CarId = 2006, CarName = "Tesla 12", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
+            //carManager.Delete(new Car() { CarId = 2006, CarName = "Passat", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
+            //carManager.Update(new Car() { CarId = 2006, CarName = "Passat", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
         }
 
         private static void ColorTest(ColorManager colorManager)
@@ -127,7 +127,7 @@ namespace ConsoleUI
 
             //colorManager.Update(new Color() { ColorId = 7, ColorName = "Silver" });
 
-            //colorManager.Add(new Color { ColorName = "turuncu" });
+            //colorManager.Add(new Color { ColorName = "Siyah" });
 
             var result = colorManager.GetAll();
             Console.WriteLine("Tüm Renkler \n Id \t Name");
