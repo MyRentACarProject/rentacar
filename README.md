@@ -2,4 +2,12 @@ Bu proje Salih KARTAY - 16290031 ve İsmet TÜRK tarfından geliştirilmiş olup
 Projeyi Microsoft Visual Studio uygulamasında C# dilinde geliştirdik. 
 Planlanan zamandan geç yüklenmesinin sebebi projede yaptığımız değişikliklerdir.  
 Yazılım Proje Yönetimi dersi için yaptığımız projenin test aşamasını tamamlamış bulunmaktayız. 
-Projenin teslimi en kısa sürede tamamlanacaktır. 
+Projede kullanılan Teknolojiler:
+- .NET
+- ASP.NET for Restful api
+- EntityFramework Core
+- Autofac
+- FluentValidation
+- MsSql
+
+
