@@ -60,7 +60,7 @@ namespace ConsoleUI
         {
             var result = customerManager.GetAll();
 
-            Console.WriteLine("\nAraba Kiralayan Şirketler:\n\n Company Name");
+            Console.WriteLine("\nKurumsal Kiralamalar:\n\n Company Name");
             foreach (var customer in result.Data)
             {
                 Console.WriteLine($"{customer.CompanyName}");
@@ -82,8 +82,8 @@ namespace ConsoleUI
 
             }
 
-            //userManager.Add(new User { FirstName="Kayahan",LastName="Haskaya",Email="kayahan45@gmail.com",Password="123kayahan"});
-            //userManager.Update(new User {UserId=1005,Password="123haskaya" });
+            //userManager.Add(new User { FirstName="Salih",LastName="Kartay",Email="salihkartay19@gmail.com",Password="salih12345"});
+            //userManager.Update(new User {UserId=1005,Password="salih123" });
             //userManager.Delete(new User { UserId = 1005 });
         }
 
@@ -92,8 +92,8 @@ namespace ConsoleUI
 
         private static void BrandTest(BrandManager brandManager)
         {
-            //brandManager.Add(new Brand { BrandName = "Audi" });
-            //brandManager.Update(new Brand {BrandId=2002, BrandName="Audi"});
+            //brandManager.Add(new Brand { BrandName = "Passat" });
+            //brandManager.Update(new Brand {BrandId=2002, BrandName="passat"});
             //brandManager.Delete(new Brand { BrandId=2002});
         }
 
@@ -115,7 +115,7 @@ namespace ConsoleUI
                 Console.WriteLine(result.Message);
             }
             //carManager.Add(new Car{CarName = "Jetta",ModelYear = "2017",DailyPrice = 300,Descriptions = "Manuel Dizel",BrandId = 5,ColorId = 5});
-            //carManager.Add(new Car() { CarName = "Tesla 12", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
+            //carManager.Add(new Car() { CarName = "Passat", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
             //carManager.Delete(new Car() { CarId = 2006, CarName = "Tesla 12", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
             //carManager.Update(new Car() { CarId = 2006, CarName = "Tesla 12", BrandId = 6, ColorId = 4, ModelYear = "2010", DailyPrice = 400, Descriptions = "Güzel Araba" });
         }
